@@ -1,0 +1,28 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1> <%= listTitle %> </h1>
+  </div>
+
+  <div class="box">
+    <% newListItems.forEach(item => {%>
+      <!-- This form send request to the delete route in the server,
+      for submitting we need a submit button!!!! /but we dont want a button
+      here, so how to submit form when checkbox is checked?-->
+      <form method="post" action="/delete">
+        <div class="item">
+          <input onChange="this.form.submit()" value ="<%=item.id %>" name="checkbox" type="checkbox">
+          <p><%=  item.name  %></p>
+        </div>
+        <!-- This hidden input is used to know the list to which item belongs -->
+        <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+      </form>
+      <% }) %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="list" value="<%= listTitle %>">+</button>
+      </form>
+  </div>
+
+<%- include("footer") -%>
