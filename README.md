@@ -1,2 +1,2 @@
 # todolist
-"app.js" is the nodejs express server acts as the backend for the app, it does CRUD actions on the MongoDB database and also reacts to the HTTP GET and POST requests coming from a route. The views folder contains the template files for each section of the app(header, footer, body).
+"app.js" is the nodejs express server acts as the backend for the app, it does CRUD actions on the MongoDB atlas database and also reacts to the HTTP GET and POST requests coming from a route. Dynamic routes enbales the app to react to custom parameters defined in URL by users as they may create custom lists. The views folder contains the template files for each section of the app(header, footer, body).
