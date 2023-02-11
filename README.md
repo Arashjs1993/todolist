@@ -1,0 +1,2 @@
+# todolist
+"app.js" is the express server acts as the backend for the app, it does CRUD actions on the MongoDB database. The views folder contains the 
